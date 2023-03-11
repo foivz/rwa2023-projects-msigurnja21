@@ -19,10 +19,12 @@ Alat za praćenje osobnih financija
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
 Magdalena Sigurnjaka | msigurnja21@foi.hr | 0016155027 | msigurnja21
-Ime i prezime | ... | ... | ...
 
 ## Opis domene
-Umjesto ovih uputa opišite domenu ili problem koji pokrivate vašim  projektom. Domena može biti proizvoljna, ali obratite pozornost da sukladno ishodima učenja, domena omogući primjenu zahtijevanih koncepata kako je to navedeno u sljedećem poglavlju. Priložite odgovarajuće skice gdje je to prikladno.
+Potrebno je napraviti sustav za praćenje osobne potrošnje koji omogućava lakšu procjenu treba li smanjiti potrošnju ili ne i na što se koliko troši. Sustav bi trebao prikazati troškove po kategorijama ili određenom vremenskom razdoblju i statistiku koliko bi novca trebalo ostati do kraja mjeseca temeljem dnevne potrošnje. 
+Potrebno je omogućiti unos prihoda i troškova, učitavanje podataka iz CSV datoteke i podaci bi trebali biti u vanjskoj bazi podataka.
+Također potrebno je napraviti sustav prijave po potrebi.
+
 
 ## Specifikacija projekta
 Umjesto ovih uputa opišite zahtjeve za funkcionalnošću programskog proizvoda. Pobrojite osnovne funkcionalnosti. Također uzmite u obzir da je u ovom trenutku dovoljno opisati 3 funkcionalnosti, dok će sve funkcionalnoisti biti pobrojane u sklopu rada na projektu i specifikacija zahtjeva. Funkcionalnosti sustava bobrojite u tablici ispod koristeći predložak koji slijedi:

@@ -12,13 +12,13 @@ Sav programski kod potrebno je verzionirati u glavnoj **master** grani i **obvez
 Nakon vaše prijave bit će vam dodijeljen mentor s kojim ćete tijekom semestra raditi na ovom projektu. Mentor će vam slati povratne informacije kroz sekciju Discussions također dostupnu na GitHubu vašeg projekta. A sada, vrijeme je da opišete vaš projekt. Za opis vašeg projektnog prijedloga molimo vas koristite **predložak** koji je naveden u nastavku, a započnite tako da kliknete na *olovku* u desnom gornjem kutu ovoga dokumenta :) 
 
 # Naziv projekta
-(u redak iznad navedite kratki proizvoljni naziv projekta prikladan akademskoj zajednici, a ovaj tekst obrišite)
+Alat za praćenje osobnih financija
 
 ## Projektni tim
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Ime i prezime | mojaadresa@foi.hr | 000000000 | githubuser
+Magdalena Sigurnjaka | msigurnja21@foi.hr | 0016155027 | msigurnja21
 Ime i prezime | ... | ... | ...
 
 ## Opis domene

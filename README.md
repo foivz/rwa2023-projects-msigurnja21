@@ -21,7 +21,7 @@ Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 Magdalena Sigurnjak | msigurnja21@foi.hr | 0016155027 | msigurnja21
 
 ## Opis domene
-Zbog inflacije i prelaska na euro postaje sve teže pratiti osobnu potrošnju, odnosno troši li se previše ili premalo. Potrebno je kreirati sustav u koji bi se unosili prihodi i troškovi, te koji bi omogućavao bolju preglednost gdje se novac najviše troši i gdje bi trebalo smanjiti.
+Zbog inflacije i prelaska na euro postaje sve teže pratiti osobnu potrošnju, odnosno troši li se previše ili premalo. Potrebno je kreirati sustav u koji bi se unosili prihodi i troškovi, te koji bi omogućavao bolju preglednost gdje se novac najviše troši i gdje bi trebalo smanjiti potrošnju.
 
 Klijentica trenutno evidentira troškove u bilješkama na mobitelu, međutim već ih ima preko 200 i teško joj se snalaziti, voljela bi da postoji jednostavna aplikacija na laptopu koja omogućava pregled troškova kategoriziranih po vrsti.
 

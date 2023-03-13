@@ -21,9 +21,18 @@ Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 Magdalena Sigurnjaka | msigurnja21@foi.hr | 0016155027 | msigurnja21
 
 ## Opis domene
-Potrebno je napraviti sustav za praćenje osobne potrošnje koji omogućava lakšu procjenu treba li smanjiti potrošnju ili ne i na što se koliko troši. Sustav bi trebao prikazati troškove po kategorijama ili određenom vremenskom razdoblju i statistiku koliko bi novca trebalo ostati do kraja mjeseca temeljem dnevne potrošnje. 
-Potrebno je omogućiti unos prihoda i troškova, učitavanje podataka iz CSV datoteke i podaci bi trebali biti u vanjskoj bazi podataka.
-Također potrebno je napraviti sustav prijave po potrebi.
+Zbog inflacije i prelaska na euro postaje sve teže pratiti osobnu potrošnju, odnosno troši li se previše ili premalo. Potrebno je kreirati sustav u koji bi se unosili prihodi i troškovi, te koji bi omogućavao bolje preglednost gdje se novac najviše troši i gdje bi trebalo smanjiti.
+
+Klijentica trenutno evidentira troškove u bilješkama na mobitelu, međutim već ih ima preko 200 i teško joj se snalaziti, voljela bi da postoji jednostavna apliakcija na laptopu koja omogućava pregled troškova kategoriziranih po vrsti.
+
+S obzirom da njen mlađi brat svaki drugi vikend igra igrice na njenom laptopu, trebala bi imati sustav prijave koji se može uključiti po potrebi kako bi onemogućila da uđe u program i unosi stavke u evidenciju. Također bilo bi dobro podatke držati u vanjskoj bazi podataka kako se u slučaju virusa ne bi sve obrisalo.
+
+Poželjno je omogućiti automatsko učitavanje dosadašnjih 200 bilješki iz CSV datoteke u program, to bi uštedjelo puno vremena i truda.
+
+Troškovi bi se unosili u stupcima. Vrijednosti bi bile:šifra, iznos potrošenog novca, komentar uz transakciju
+Troškovi bi trebali biti kateogrizirani po vrsti. Na primjer hrana i piće je broj 1, podkategorija je pekara i ona je broj 11, kada bi bilo potrebe za novom podkategorijom bila bi 12.. 
+
+Potrebno je omogućiti unos mjesečne plaće kako bi se prikazala statistika i predviđanje koliko bi novaca imala do kraja mjeseca i koliko dana ima do nule na računu prema prosječnoj dnevnoj potrošnji.
 
 
 ## Specifikacija projekta

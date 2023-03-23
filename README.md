@@ -39,9 +39,11 @@ Umjesto ovih uputa opišite zahtjeve za funkcionalnošću programskog proizvoda.
 Oznaka | Naziv | Kratki opis 
 ------ | ----- | ----------- 
 F01 | Login | Za pristup alatu za praćenje osobnih financije potrebna je autentikacija korisnika pomoću login funkcionalnosti. Korisnik sam kreira korisničko ime i lozinku pri prvom pokretanju aplikacije. Opcija login bi se trebala isključiti po potrebi.
-F02 | Unos prihoda i troškova |  Korisnik bi trebao biti u mogućnosti unijeti troškove uz opis i kategoriju.
+F02 | Unos prihoda i troškova |  Korisnik bi trebao biti u mogućnosti unijeti prihode i troškove uz opis i kategoriju.
 F03 | Prikaz prihoda i troškova | Korisniku bi se trebalo omogućiti prikaz svih prihoda i troškova .
 F04 | Predviđanje | Potrebno je omogućiti korisniku predviđanje na temelju prosječne dnevne potrošnje koliko bi novaca ostalo do kraja mjeseca ili koliko je dana potrebno do nule na računu.
+F05 | Vanjska baza podataka | Potrebno je napraviti vanjsku bazu podataka što bi osiguralo veću sigurnost podataka.
+F06 | Učitavanje podataka iz CSV datoteke | Omogućiti automatsko učitavanje dosadašnjih 200 bilješki iz CSV datoteke.
 
 ## Tehnologije i oprema
 Umjesto ovih uputa jasno popišite sve tehnologije, alate i opremu koju ćete koristiti pri implementaciji vašeg rješenja. Projekti se razvijaju koristeći .Net Framework ili .Net Core razvojne okvire, a vrsta projekta može biti WinForms, WPF i UWP. Ne zaboravite planirati korištenje tehnologija u aktivnostima kao što su projektni menadžment ili priprema dokumentacije. Tehnologije koje ćete koristiti bi trebale biti javno dostupne, a ako ih ne budemo obrađivali na vježbama u vašoj dokumentaciji ćete morati navesti način preuzimanja, instaliranja i korištenja onih tehnologija koje su neopbodne kako bi se vaš programski proizvod preveo i pokrenuo. Pazite da svi alati koje ćete koristiti moraju imati odgovarajuću licencu. Što se tiče zahtjeva nastavnika, obvezno je koristiti git i GitHub za verzioniranje programskog koda, GitHub Wiki za pisanje tehničke i projektne dokumentacije, a projektne zadatke je potrebno planirati i pratiti u alatu GitHub projects. 

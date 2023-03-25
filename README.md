@@ -40,7 +40,8 @@ Oznaka | Naziv | Kratki opis
 ------ | ----- | ----------- 
 F01 | Login | Za pristup alatu za praćenje osobnih financije potrebna je autentikacija korisnika pomoću login funkcionalnosti. Korisnik se prijavljuje s podacima koji su mu dodjeljeni. Opcija login bi se trebala isključiti i uključiti po potrebi.
 F02 | Unos troškova |  Korisnik bi trebao biti u mogućnosti unijeti troškove uz opis i kategoriju.
-F03 | Prikaz troškova | Korisniku bi se trebalo omogućiti prikaz troškova po vrsti, vremenskom periodu .
+F03 | Prikaz troškova | Korisniku bi se trebalo omogućiti prikaz svih troškova, troškova po vrsti i vremenskom periodu.
+F04 | Unos mjesečne plaće | Omogućiti unos mjesečne plaće kako bi se moglo napraviti predviđanje.
 F04 | Predviđanje | Potrebno je omogućiti korisniku predviđanje na temelju prosječne dnevne potrošnje koliko bi novaca ostalo do kraja mjeseca ili koliko je dana potrebno do nule na računu.
 F05 | Vanjska baza podataka | Potrebno je napraviti vanjsku bazu podataka što bi osiguralo veću sigurnost podataka.
 F06 | Učitavanje podataka iz CSV datoteke | Omogućiti automatsko učitavanje dosadašnjih 200 bilješki iz CSV datoteke.

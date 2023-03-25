@@ -43,7 +43,7 @@ F02 | Unos troškova |  Korisnik bi trebao biti u mogućnosti unijeti troškove 
 F03 | Prikaz troškova | Korisniku bi se trebalo omogućiti prikaz svih troškova, troškova po vrsti i vremenskom periodu.
 F04 | Unos mjesečne plaće | Omogućiti unos mjesečne plaće kako bi se moglo napraviti predviđanje.
 F04 | Predviđanje | Potrebno je omogućiti korisniku predviđanje na temelju prosječne dnevne potrošnje koliko bi novaca ostalo do kraja mjeseca ili koliko je dana potrebno do nule na računu.
-F05 | Vanjska baza podataka | Potrebno je napraviti vanjsku bazu podataka što bi osiguralo veću sigurnost podataka.
+F05 | Vanjska baza podataka | Potrebno je napraviti vanjsku bazu podataka kako bi podaci bili sigurniji i ne bi ovisili o laptopu.
 F06 | Učitavanje podataka iz CSV datoteke | Omogućiti automatsko učitavanje dosadašnjih 200 bilješki iz CSV datoteke.
 
 ## Tehnologije i oprema

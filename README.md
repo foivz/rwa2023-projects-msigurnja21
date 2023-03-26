@@ -33,8 +33,6 @@ Kako bi se prikazala statistika i predviđanje koliko bi novaca bilo preostalo d
 
 
 ## Specifikacija projekta
-Umjesto ovih uputa opišite zahtjeve za funkcionalnošću programskog proizvoda. Pobrojite osnovne funkcionalnosti. Također uzmite u obzir da je u ovom trenutku dovoljno opisati 3 funkcionalnosti, dok će sve funkcionalnoisti biti pobrojane u sklopu rada na projektu i specifikacija zahtjeva. Funkcionalnosti sustava bobrojite u tablici ispod koristeći predložak koji slijedi:
-
 
 Oznaka | Naziv | Kratki opis 
 ------ | ----- | ----------- 

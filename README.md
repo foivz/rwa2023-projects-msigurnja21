@@ -21,15 +21,18 @@ Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 Magdalena Sigurnjak | msigurnja21@foi.hr | 0016155027 | msigurnja21
 
 ## Opis domene
-Domena ove aplikacije je osobne financije. S obzirom na inflaciju i prijelaz na euro, sve je teže pratiti osobnu potrošnju i kontrolirati financije. Stoga je potrebno kreirati sustav koji omogućava unos prihoda i troškova te bolju preglednost gdje se novac najviše troši i gdje bi trebalo smanjiti potrošnju.
 
-Klijentica trenutno evidentira troškove u bilješkama na mobitelu, što otežava snalaženje jer ima preko 200 bilješki. Stoga bi bila korisna jednostavna aplikacija na laptopu koja omogućava pregled troškova kategoriziranih po vrsti.
+Zbog inflacije i prelaska na euro postaje sve teže pratiti osobnu potrošnju, odnosno troši li se previše ili premalo. Potrebno je kreirati sustav u koji bi se unosili prihodi i troškovi, te koji bi omogućavao bolju preglednost gdje se novac najviše troši i gdje bi trebalo smanjiti potrošnju.
 
-Kako bi se spriječilo neovlašteno korištenje aplikacije, potrebno je uključiti sustav prijave koji bi se mogao uključiti po potrebi. Također bi bilo poželjno podatke držati u vanjskoj bazi podataka kako bi se spriječilo brisanje u slučaju virusa.
+Klijentica trenutno evidentira troškove u bilješkama na mobitelu, međutim već ih ima preko 200 i teško joj se snalaziti, voljela bi da postoji jednostavna aplikacija na laptopu koja omogućava pregled troškova kategoriziranih po vrsti.
 
-Kako bi se uštedjelo vrijeme i trud, moguće je omogućiti automatsko učitavanje dosadašnjih 200 bilješki iz CSV datoteke u program. Troškovi bi se unosili u stupcima sa šifrom, iznosom potrošenog novca i komentarom uz transakciju. Troškovi bi trebali biti kategorizirani po vrsti i podkategoriji. Na primjer, hrana i piće bi bili broj 1, a podkategorija pekara bi bila broj 11. U slučaju potrebe za novom podkategorijom, dodijelio bi se broj 12.
+S obzirom da njen mlađi brat svaki drugi vikend igra igrice na njenom laptopu, trebala bi imati sustav prijave koji se može uključiti po potrebi. Također bilo bi dobro podatke držati u vanjskoj bazi podataka kako se u slučaju virusa ne bi sve obrisalo.
 
-Kako bi se prikazala statistika i predviđanje koliko bi novaca bilo preostalo do kraja mjeseca i koliko dana ima do nule na računu prema prosječnoj dnevnoj potrošnji, potrebno je omogućiti unos mjesečne plaće. Ovaj sustav bi pomogao korisnicima u boljoj kontroli financija i planiranju budućih rashoda.
+Poželjno je omogućiti automatsko učitavanje dosadašnjih 200 bilješki iz CSV datoteke u program, to bi uštedjelo puno vremena i truda.
+
+Troškovi bi se unosili u stupcima. Vrijednosti bi bile: šifra, iznos potrošenog novca, komentar uz transakciju. Troškovi bi trebali biti kateogrizirani po vrsti. Na primjer hrana i piće je broj 1, podkategorija je pekara i ona je broj 11, kada bi bilo potrebe za novom podkategorijom bila bi 12..
+
+Potrebno je omogućiti unos mjesečne plaće kako bi se prikazala statistika kako se novac smanjuje tijekom mjeseca i predviđanje koliko bi novaca imala do kraja mjeseca i koliko dana ima do nule na računu prema prosječnoj dnevnoj potrošnji.
 
 
 ## Specifikacija projekta

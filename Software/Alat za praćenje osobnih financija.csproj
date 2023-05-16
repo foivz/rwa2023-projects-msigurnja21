@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmNovaŠifra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmNovaŠifra.Designer.cs">
-      <DependentUpon>FrmNovaŠifra.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmPrijava.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +58,12 @@
     <Compile Include="FrmTroškovi.Designer.cs">
       <DependentUpon>FrmTroškovi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUnesiPlaću.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUnesiPlaću.Designer.cs">
+      <DependentUpon>FrmUnesiPlaću.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUnesiTrošak.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,14 +72,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmNovaŠifra.resx">
-      <DependentUpon>FrmNovaŠifra.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrijava.resx">
       <DependentUpon>FrmPrijava.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTroškovi.resx">
       <DependentUpon>FrmTroškovi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUnesiPlaću.resx">
+      <DependentUpon>FrmUnesiPlaću.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUnesiTrošak.resx">
       <DependentUpon>FrmUnesiTrošak.cs</DependentUpon>

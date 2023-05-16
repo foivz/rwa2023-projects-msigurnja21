@@ -36,7 +36,6 @@
             this.txtIznos = new System.Windows.Forms.TextBox();
             this.txtKomentar = new System.Windows.Forms.TextBox();
             this.dtpDatum = new System.Windows.Forms.DateTimePicker();
-            this.btnDodajŠifru = new System.Windows.Forms.Button();
             this.btnUnesiTrošak = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -80,7 +79,7 @@
             // 
             this.txtŠifra.Location = new System.Drawing.Point(52, 59);
             this.txtŠifra.Name = "txtŠifra";
-            this.txtŠifra.Size = new System.Drawing.Size(165, 22);
+            this.txtŠifra.Size = new System.Drawing.Size(246, 22);
             this.txtŠifra.TabIndex = 4;
             // 
             // txtIznos
@@ -107,16 +106,6 @@
             this.dtpDatum.TabIndex = 8;
             this.dtpDatum.Value = new System.DateTime(2023, 5, 6, 0, 0, 0, 0);
             // 
-            // btnDodajŠifru
-            // 
-            this.btnDodajŠifru.Location = new System.Drawing.Point(223, 57);
-            this.btnDodajŠifru.Name = "btnDodajŠifru";
-            this.btnDodajŠifru.Size = new System.Drawing.Size(75, 27);
-            this.btnDodajŠifru.TabIndex = 9;
-            this.btnDodajŠifru.Text = "Dodaj";
-            this.btnDodajŠifru.UseVisualStyleBackColor = true;
-            this.btnDodajŠifru.Click += new System.EventHandler(this.btnDodajŠifru_Click);
-            // 
             // btnUnesiTrošak
             // 
             this.btnUnesiTrošak.Location = new System.Drawing.Point(223, 351);
@@ -132,7 +121,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 429);
             this.Controls.Add(this.btnUnesiTrošak);
-            this.Controls.Add(this.btnDodajŠifru);
             this.Controls.Add(this.dtpDatum);
             this.Controls.Add(this.txtKomentar);
             this.Controls.Add(this.txtIznos);
@@ -158,7 +146,6 @@
         private System.Windows.Forms.TextBox txtIznos;
         private System.Windows.Forms.TextBox txtKomentar;
         private System.Windows.Forms.DateTimePicker dtpDatum;
-        private System.Windows.Forms.Button btnDodajŠifru;
         private System.Windows.Forms.Button btnUnesiTrošak;
     }
 }

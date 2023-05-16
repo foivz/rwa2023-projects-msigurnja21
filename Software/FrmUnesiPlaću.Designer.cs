@@ -89,7 +89,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblIznosPlace);
             this.Name = "FrmUnesiPlaću";
-            this.Text = "FrmUnesiPlaću";
+            this.Text = "Unos plaće";
             this.ResumeLayout(false);
             this.PerformLayout();
 

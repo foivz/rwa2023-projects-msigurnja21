@@ -70,6 +70,8 @@
     <Compile Include="FrmUnesiTrošak.Designer.cs">
       <DependentUpon>FrmUnesiTrošak.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Placa.cs" />
+    <Compile Include="Models\Trosak.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmPrijava.resx">

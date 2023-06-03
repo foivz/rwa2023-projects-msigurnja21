@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Alat_za_praćenje_osobnih_financija.Models
 {
-    public abstract class Placa
+    public abstract class Korisnik
     {
         public string Id { get; set; }
-        public double Iznos { get; set; }   
-        public string Datum { get; set; }
+        public string Ime { get; set; }
+        public string Prezime { get; set; }
+        public string Korisnicko_ime { get; set; }
+        public string Lozinka { get; set; }
     }
 }

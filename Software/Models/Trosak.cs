@@ -8,6 +8,7 @@ namespace Alat_za_praćenje_osobnih_financija.Models
 {
     public abstract class Trosak
     {
+        public string Id { get; set; }
         public string Kategorija { get; set; }
         public string Datum { get; set; }
         public double Iznos { get; set; }

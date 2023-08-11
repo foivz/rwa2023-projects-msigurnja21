@@ -37,3 +37,22 @@ D:\1FAKS\4. semestar\RWA\Alat za praćenje osobnih financija - projekt\foivz\rwa
 D:\1FAKS\4. semestar\RWA\Alat za praćenje osobnih financija - projekt\foivz\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.csproj.CoreCompileInputs.cache
 D:\1FAKS\4. semestar\RWA\Alat za praćenje osobnih financija - projekt\foivz\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.exe
 D:\1FAKS\4. semestar\RWA\Alat za praćenje osobnih financija - projekt\foivz\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.pdb
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.csproj.AssemblyReference.cache
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.csproj.SuggestedBindingRedirects.cache
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat_za_praćenje_osobnih_financija.FrmPrijava.resources
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat_za_praćenje_osobnih_financija.FrmTroškovi.resources
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat_za_praćenje_osobnih_financija.FrmUnesiPlaću.resources
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat_za_praćenje_osobnih_financija.FrmUnesiTrošak.resources
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat_za_praćenje_osobnih_financija.Properties.Resources.resources
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.csproj.GenerateResource.cache
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.csproj.CoreCompileInputs.cache
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.exe
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.pdb
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\Alat za praćenje osobnih financija.exe.config
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\Alat za praćenje osobnih financija.exe
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\Alat za praćenje osobnih financija.pdb
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\EntityFramework.dll
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\EntityFramework.xml
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.csproj.CopyComplete

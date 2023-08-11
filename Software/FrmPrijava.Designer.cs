@@ -69,6 +69,7 @@
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
             this.txtKorisnickoIme.Size = new System.Drawing.Size(149, 22);
             this.txtKorisnickoIme.TabIndex = 3;
+            this.txtKorisnickoIme.Text = "aanic";
             // 
             // txtLozinka
             // 
@@ -76,9 +77,10 @@
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.Size = new System.Drawing.Size(149, 22);
             this.txtLozinka.TabIndex = 4;
+            this.txtLozinka.Text = "aanic123";
             this.txtLozinka.UseSystemPasswordChar = true;
             // 
-            // frmPrijava
+            // FrmPrijava
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,7 +90,7 @@
             this.Controls.Add(this.btnPrijava);
             this.Controls.Add(this.lblLozinka);
             this.Controls.Add(this.lblKorisnickoIme);
-            this.Name = "frmPrijava";
+            this.Name = "FrmPrijava";
             this.Text = "Prijava";
             this.ResumeLayout(false);
             this.PerformLayout();

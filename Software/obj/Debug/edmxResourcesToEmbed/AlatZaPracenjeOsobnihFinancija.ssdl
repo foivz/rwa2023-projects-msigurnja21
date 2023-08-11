@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RWA23_msigurnja21_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Kategorije_troskova">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Sifra" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="Naziv" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Korisnici">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Ime" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Prezime" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Korisnicko_ime" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Lozinka" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Place">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id_Korisnika" Type="int" Nullable="false" />
+    <Property Name="Iznos" Type="float" Nullable="false" />
+    <Property Name="Datum" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Troskovi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id_Kategorija_troska" Type="int" Nullable="false" />
+    <Property Name="Id_Korisnika" Type="int" Nullable="false" />
+    <Property Name="Datum" Type="date" Nullable="false" />
+    <Property Name="Iznos" Type="float" Nullable="false" />
+    <Property Name="Komentar" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Kategorija_troska">
+    <End Role="Kategorije_troskova" Type="Self.Kategorije_troskova" Multiplicity="1" />
+    <End Role="Troskovi" Type="Self.Troskovi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategorije_troskova">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Troskovi">
+        <PropertyRef Name="Id_Kategorija_troska" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Korisnik_Placa">
+    <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="1" />
+    <End Role="Place" Type="Self.Place" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Place">
+        <PropertyRef Name="Id_Korisnika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Korisnika">
+    <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="1" />
+    <End Role="Troskovi" Type="Self.Troskovi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Troskovi">
+        <PropertyRef Name="Id_Korisnika" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RWA23_msigurnja21_DBModelStoreContainer">
+    <EntitySet Name="Kategorije_troskova" EntityType="Self.Kategorije_troskova" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Korisnici" EntityType="Self.Korisnici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Place" EntityType="Self.Place" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Troskovi" EntityType="Self.Troskovi" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Kategorija_troska" Association="Self.FK_Kategorija_troska">
+      <End Role="Kategorije_troskova" EntitySet="Kategorije_troskova" />
+      <End Role="Troskovi" EntitySet="Troskovi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Korisnik_Placa" Association="Self.FK_Korisnik_Placa">
+      <End Role="Korisnici" EntitySet="Korisnici" />
+      <End Role="Place" EntitySet="Place" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Korisnika" Association="Self.FK_Korisnika">
+      <End Role="Korisnici" EntitySet="Korisnici" />
+      <End Role="Troskovi" EntitySet="Troskovi" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ebab198d1e204d02a7353cb463efd557" Name="Diagram1">
+        <EntityTypeShape EntityType="RWA23_msigurnja21_DBModel.Kategorije_troskova" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RWA23_msigurnja21_DBModel.Korisnici" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RWA23_msigurnja21_DBModel.Place" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="RWA23_msigurnja21_DBModel.Troskovi" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="RWA23_msigurnja21_DBModel.FK_Kategorija_troska" ManuallyRouted="false" />
+        <AssociationConnector Association="RWA23_msigurnja21_DBModel.FK_Korisnik_Placa" ManuallyRouted="false" />
+        <AssociationConnector Association="RWA23_msigurnja21_DBModel.FK_Korisnika" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

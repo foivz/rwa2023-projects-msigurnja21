@@ -17,10 +17,5 @@ namespace Alat_za_praćenje_osobnih_financija
             InitializeComponent();
         }
 
-        private void btnDodajŠifru_Click(object sender, EventArgs e)
-        {
-            FrmNovaŠifra frmNovaŠifra = new FrmNovaŠifra();  //stvaranje objekta nove forme za unos nove šifre kategorije
-            frmNovaŠifra.ShowDialog();                       //otvaranje forme za unos nove šifre kategorije
-        }
     }
 }

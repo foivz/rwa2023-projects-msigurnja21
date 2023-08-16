@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AlatZaPraćenjeOsobnihFinancijaModelStoreContainer" CdmEntityContainer="AlatZaPraćenjeOsobnihFinancijaEntities">
+    <EntitySetMapping Name="Kategorije_troskova">
+      <EntityTypeMapping TypeName="AlatZaPraćenjeOsobnihFinancijaModel.Kategorije_troskova">
+        <MappingFragment StoreEntitySet="Kategorije_troskova">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Sifra" ColumnName="Sifra" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Korisnicis">
+      <EntityTypeMapping TypeName="AlatZaPraćenjeOsobnihFinancijaModel.Korisnici">
+        <MappingFragment StoreEntitySet="Korisnici">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Korisnicko_ime" ColumnName="Korisnicko_ime" />
+          <ScalarProperty Name="Lozinka" ColumnName="Lozinka" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Places">
+      <EntityTypeMapping TypeName="AlatZaPraćenjeOsobnihFinancijaModel.Place">
+        <MappingFragment StoreEntitySet="Place">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_Korisnika" ColumnName="Id_Korisnika" />
+          <ScalarProperty Name="Iznos" ColumnName="Iznos" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Troskovis">
+      <EntityTypeMapping TypeName="AlatZaPraćenjeOsobnihFinancijaModel.Troskovi">
+        <MappingFragment StoreEntitySet="Troskovi">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Kategorija_troska" ColumnName="Kategorija_troska" />
+          <ScalarProperty Name="Id_Korisnika" ColumnName="Id_Korisnika" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="Iznos" ColumnName="Iznos" />
+          <ScalarProperty Name="Komentar" ColumnName="Komentar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

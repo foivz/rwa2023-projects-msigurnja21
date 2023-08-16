@@ -13,10 +13,10 @@ namespace Alat_za_praćenje_osobnih_financija
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RWA23_msigurnja21_DBEntities : DbContext
+    public partial class AlatZaPraćenjeOsobnihFinancijaEntities : DbContext
     {
-        public RWA23_msigurnja21_DBEntities()
-            : base("name=RWA23_msigurnja21_DBEntities")
+        public AlatZaPraćenjeOsobnihFinancijaEntities()
+            : base("name=AlatZaPraćenjeOsobnihFinancijaEntities")
         {
         }
     
@@ -25,7 +25,7 @@ namespace Alat_za_praćenje_osobnih_financija
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Kategorije_troskova> Kategorije_troskova { get; set; }
+        public virtual DbSet<Models.Kategorije_troskova> Kategorije_troskova { get; set; }
         public virtual DbSet<Models.Korisnici> Korisnicis { get; set; }
         public virtual DbSet<Models.Place> Places { get; set; }
         public virtual DbSet<Models.Troskovi> Troskovis { get; set; }

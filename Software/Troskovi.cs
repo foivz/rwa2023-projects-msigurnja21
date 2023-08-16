@@ -15,13 +15,12 @@ namespace Alat_za_praćenje_osobnih_financija.Models
     public partial class Troskovi
     {
         public int Id { get; set; }
-        public int Id_Kategorija_troska { get; set; }
+        public string Kategorija_troska { get; set; }
         public int Id_Korisnika { get; set; }
         public System.DateTime Datum { get; set; }
         public double Iznos { get; set; }
         public string Komentar { get; set; }
     
-        public virtual Kategorije_troskova Kategorije_troskova { get; set; }
         public virtual Korisnici Korisnici { get; set; }
     }
 }

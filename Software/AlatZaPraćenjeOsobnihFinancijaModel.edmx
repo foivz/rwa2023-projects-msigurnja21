@@ -4,12 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="RWA23_msigurnja21_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="AlatZaPraćenjeOsobnihFinancijaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Kategorije_troskova">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Sifra" Type="varchar" MaxLength="2" Nullable="false" />
           <Property Name="Naziv" Type="varchar" MaxLength="40" Nullable="false" />
         </EntityType>
@@ -17,7 +17,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Ime" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Prezime" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="Korisnicko_ime" Type="varchar" MaxLength="20" Nullable="false" />
@@ -27,7 +27,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Id_Korisnika" Type="int" Nullable="false" />
           <Property Name="Iznos" Type="float" Nullable="false" />
           <Property Name="Datum" Type="date" Nullable="false" />
@@ -36,25 +36,16 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Id_Kategorija_troska" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kategorija_troska" Type="varchar" MaxLength="2" Nullable="false" />
           <Property Name="Id_Korisnika" Type="int" Nullable="false" />
           <Property Name="Datum" Type="date" Nullable="false" />
           <Property Name="Iznos" Type="float" Nullable="false" />
           <Property Name="Komentar" Type="varchar" MaxLength="255" Nullable="false" />
         </EntityType>
-        <Association Name="FK_Kategorija_troska">
-          <End Role="Kategorije_troskova" Type="Self.Kategorije_troskova" Multiplicity="1" />
-          <End Role="Troskovi" Type="Self.Troskovi" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Kategorije_troskova">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Troskovi">
-              <PropertyRef Name="Id_Kategorija_troska" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_Kategorija_troska' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_Kategorija_troska" />-->
         <Association Name="FK_Korisnik_Placa">
           <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="1" />
           <End Role="Place" Type="Self.Place" Multiplicity="*" />
@@ -79,15 +70,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="RWA23_msigurnja21_DBModelStoreContainer">
+        <EntityContainer Name="AlatZaPraćenjeOsobnihFinancijaModelStoreContainer">
           <EntitySet Name="Kategorije_troskova" EntityType="Self.Kategorije_troskova" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Korisnici" EntityType="Self.Korisnici" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Place" EntityType="Self.Place" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Troskovi" EntityType="Self.Troskovi" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Kategorija_troska" Association="Self.FK_Kategorija_troska">
-            <End Role="Kategorije_troskova" EntitySet="Kategorije_troskova" />
-            <End Role="Troskovi" EntitySet="Troskovi" />
-          </AssociationSet>
           <AssociationSet Name="FK_Korisnik_Placa" Association="Self.FK_Korisnik_Placa">
             <End Role="Korisnici" EntitySet="Korisnici" />
             <End Role="Place" EntitySet="Place" />
@@ -101,21 +88,20 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="RWA23_msigurnja21_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="AlatZaPraćenjeOsobnihFinancijaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Kategorije_troskova">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Sifra" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Naziv" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Troskovis" Relationship="Self.FK_Kategorija_troska" FromRole="Kategorije_troskova" ToRole="Troskovi" />
         </EntityType>
         <EntityType Name="Korisnici">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Ime" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Prezime" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Korisnicko_ime" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
@@ -127,7 +113,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Id_Korisnika" Type="Int32" Nullable="false" />
           <Property Name="Iznos" Type="Double" Nullable="false" />
           <Property Name="Datum" Type="DateTime" Nullable="false" Precision="0" />
@@ -137,27 +123,14 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Id_Kategorija_troska" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kategorija_troska" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Id_Korisnika" Type="Int32" Nullable="false" />
           <Property Name="Datum" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Iznos" Type="Double" Nullable="false" />
           <Property Name="Komentar" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Kategorije_troskova" Relationship="Self.FK_Kategorija_troska" FromRole="Troskovi" ToRole="Kategorije_troskova" />
           <NavigationProperty Name="Korisnici" Relationship="Self.FK_Korisnika" FromRole="Troskovi" ToRole="Korisnici" />
         </EntityType>
-        <Association Name="FK_Kategorija_troska">
-          <End Role="Kategorije_troskova" Type="Self.Kategorije_troskova" Multiplicity="1" />
-          <End Role="Troskovi" Type="Self.Troskovi" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Kategorije_troskova">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Troskovi">
-              <PropertyRef Name="Id_Kategorija_troska" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Korisnik_Placa">
           <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="1" />
           <End Role="Place" Type="Self.Place" Multiplicity="*" />
@@ -182,15 +155,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="RWA23_msigurnja21_DBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="AlatZaPraćenjeOsobnihFinancijaEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Kategorije_troskova" EntityType="Self.Kategorije_troskova" />
           <EntitySet Name="Korisnicis" EntityType="Self.Korisnici" />
           <EntitySet Name="Places" EntityType="Self.Place" />
           <EntitySet Name="Troskovis" EntityType="Self.Troskovi" />
-          <AssociationSet Name="FK_Kategorija_troska" Association="Self.FK_Kategorija_troska">
-            <End Role="Kategorije_troskova" EntitySet="Kategorije_troskova" />
-            <End Role="Troskovi" EntitySet="Troskovis" />
-          </AssociationSet>
           <AssociationSet Name="FK_Korisnik_Placa" Association="Self.FK_Korisnik_Placa">
             <End Role="Korisnici" EntitySet="Korisnicis" />
             <End Role="Place" EntitySet="Places" />
@@ -205,9 +174,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="RWA23_msigurnja21_DBModelStoreContainer" CdmEntityContainer="RWA23_msigurnja21_DBEntities">
+        <EntityContainerMapping StorageEntityContainer="AlatZaPraćenjeOsobnihFinancijaModelStoreContainer" CdmEntityContainer="AlatZaPraćenjeOsobnihFinancijaEntities">
           <EntitySetMapping Name="Kategorije_troskova">
-            <EntityTypeMapping TypeName="RWA23_msigurnja21_DBModel.Kategorije_troskova">
+            <EntityTypeMapping TypeName="AlatZaPraćenjeOsobnihFinancijaModel.Kategorije_troskova">
               <MappingFragment StoreEntitySet="Kategorije_troskova">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Sifra" ColumnName="Sifra" />
@@ -216,7 +185,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Korisnicis">
-            <EntityTypeMapping TypeName="RWA23_msigurnja21_DBModel.Korisnici">
+            <EntityTypeMapping TypeName="AlatZaPraćenjeOsobnihFinancijaModel.Korisnici">
               <MappingFragment StoreEntitySet="Korisnici">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Ime" ColumnName="Ime" />
@@ -227,7 +196,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Places">
-            <EntityTypeMapping TypeName="RWA23_msigurnja21_DBModel.Place">
+            <EntityTypeMapping TypeName="AlatZaPraćenjeOsobnihFinancijaModel.Place">
               <MappingFragment StoreEntitySet="Place">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Id_Korisnika" ColumnName="Id_Korisnika" />
@@ -237,10 +206,10 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Troskovis">
-            <EntityTypeMapping TypeName="RWA23_msigurnja21_DBModel.Troskovi">
+            <EntityTypeMapping TypeName="AlatZaPraćenjeOsobnihFinancijaModel.Troskovi">
               <MappingFragment StoreEntitySet="Troskovi">
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Id_Kategorija_troska" ColumnName="Id_Kategorija_troska" />
+                <ScalarProperty Name="Kategorija_troska" ColumnName="Kategorija_troska" />
                 <ScalarProperty Name="Id_Korisnika" ColumnName="Id_Korisnika" />
                 <ScalarProperty Name="Datum" ColumnName="Datum" />
                 <ScalarProperty Name="Iznos" ColumnName="Iznos" />

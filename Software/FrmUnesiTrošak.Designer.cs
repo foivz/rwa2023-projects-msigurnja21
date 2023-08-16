@@ -114,6 +114,7 @@
             this.btnUnesiTrošak.TabIndex = 10;
             this.btnUnesiTrošak.Text = "Unesi";
             this.btnUnesiTrošak.UseVisualStyleBackColor = true;
+            this.btnUnesiTrošak.Click += new System.EventHandler(this.btnUnesiTrošak_Click);
             // 
             // FrmUnesiTrošak
             // 

@@ -28,7 +28,7 @@ namespace Alat_za_praćenje_osobnih_financija
             }
             else                                                                    
             {
-                using (var context = new RWA23_msigurnja21_DBEntities())
+                using (var context = new AlatZaPraćenjeOsobnihFinancijaEntities())
                 {
                     var korisnik = from k in context.Korisnicis
                                      where k.Korisnicko_ime == txtKorisnickoIme.Text

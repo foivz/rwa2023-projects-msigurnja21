@@ -7,24 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Alat_za_praćenje_osobnih_financija
+namespace Alat_za_praćenje_osobnih_financija.Models
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Kategorije_troskova
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Kategorije_troskova()
-        {
-            this.Troskovis = new HashSet<Models.Troskovi>();
-        }
-    
         public int Id { get; set; }
         public string Sifra { get; set; }
         public string Naziv { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Models.Troskovi> Troskovis { get; set; }
     }
 }

@@ -32,8 +32,15 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnsPrikazTroškova = new System.Windows.Forms.ToolStripMenuItem();
             this.prikažiSveTroškoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hranaIPićeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kupovineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prikažiTroškovePoVremenskomPerioduToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.odNajstarijegToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.odNajnovijegToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bntUnesiTrošak = new System.Windows.Forms.Button();
+            this.dugovanjaIPotraživanjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mjesečnaČlanstvaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nezgodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrikazTroškova)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -43,6 +50,7 @@
             this.dgvPrikazTroškova.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrikazTroškova.Location = new System.Drawing.Point(12, 31);
             this.dgvPrikazTroškova.Name = "dgvPrikazTroškova";
+            this.dgvPrikazTroškova.RowHeadersVisible = false;
             this.dgvPrikazTroškova.RowHeadersWidth = 51;
             this.dgvPrikazTroškova.RowTemplate.Height = 24;
             this.dgvPrikazTroškova.Size = new System.Drawing.Size(895, 399);
@@ -70,15 +78,52 @@
             // 
             // prikažiSveTroškoveToolStripMenuItem
             // 
+            this.prikažiSveTroškoveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hranaIPićeToolStripMenuItem,
+            this.kupovineToolStripMenuItem,
+            this.dugovanjaIPotraživanjaToolStripMenuItem,
+            this.mjesečnaČlanstvaToolStripMenuItem,
+            this.nezgodeToolStripMenuItem});
             this.prikažiSveTroškoveToolStripMenuItem.Name = "prikažiSveTroškoveToolStripMenuItem";
             this.prikažiSveTroškoveToolStripMenuItem.Size = new System.Drawing.Size(361, 26);
             this.prikažiSveTroškoveToolStripMenuItem.Text = "Prikaži troškove po vrsti troška";
             // 
+            // hranaIPićeToolStripMenuItem
+            // 
+            this.hranaIPićeToolStripMenuItem.Name = "hranaIPićeToolStripMenuItem";
+            this.hranaIPićeToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
+            this.hranaIPićeToolStripMenuItem.Text = "1 - Hrana i piće";
+            this.hranaIPićeToolStripMenuItem.Click += new System.EventHandler(this.hranaIPićeToolStripMenuItem_Click);
+            // 
+            // kupovineToolStripMenuItem
+            // 
+            this.kupovineToolStripMenuItem.Name = "kupovineToolStripMenuItem";
+            this.kupovineToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
+            this.kupovineToolStripMenuItem.Text = "2 - Kupovine";
+            this.kupovineToolStripMenuItem.Click += new System.EventHandler(this.kupovineToolStripMenuItem_Click);
+            // 
             // prikažiTroškovePoVremenskomPerioduToolStripMenuItem
             // 
+            this.prikažiTroškovePoVremenskomPerioduToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.odNajstarijegToolStripMenuItem,
+            this.odNajnovijegToolStripMenuItem});
             this.prikažiTroškovePoVremenskomPerioduToolStripMenuItem.Name = "prikažiTroškovePoVremenskomPerioduToolStripMenuItem";
             this.prikažiTroškovePoVremenskomPerioduToolStripMenuItem.Size = new System.Drawing.Size(361, 26);
             this.prikažiTroškovePoVremenskomPerioduToolStripMenuItem.Text = "Prikaži troškove po vremenskom periodu";
+            // 
+            // odNajstarijegToolStripMenuItem
+            // 
+            this.odNajstarijegToolStripMenuItem.Name = "odNajstarijegToolStripMenuItem";
+            this.odNajstarijegToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.odNajstarijegToolStripMenuItem.Text = "Od najstarijeg";
+            this.odNajstarijegToolStripMenuItem.Click += new System.EventHandler(this.odNajstarijegToolStripMenuItem_Click);
+            // 
+            // odNajnovijegToolStripMenuItem
+            // 
+            this.odNajnovijegToolStripMenuItem.Name = "odNajnovijegToolStripMenuItem";
+            this.odNajnovijegToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.odNajnovijegToolStripMenuItem.Text = "Od najnovijeg";
+            this.odNajnovijegToolStripMenuItem.Click += new System.EventHandler(this.odNajnovijegToolStripMenuItem_Click);
             // 
             // bntUnesiTrošak
             // 
@@ -89,6 +134,27 @@
             this.bntUnesiTrošak.Text = "Unesi trošak";
             this.bntUnesiTrošak.UseVisualStyleBackColor = true;
             this.bntUnesiTrošak.Click += new System.EventHandler(this.bntUnesiTrošak_Click);
+            // 
+            // dugovanjaIPotraživanjaToolStripMenuItem
+            // 
+            this.dugovanjaIPotraživanjaToolStripMenuItem.Name = "dugovanjaIPotraživanjaToolStripMenuItem";
+            this.dugovanjaIPotraživanjaToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
+            this.dugovanjaIPotraživanjaToolStripMenuItem.Text = "3 - Dugovanja i potraživanja";
+            this.dugovanjaIPotraživanjaToolStripMenuItem.Click += new System.EventHandler(this.dugovanjaIPotraživanjaToolStripMenuItem_Click);
+            // 
+            // mjesečnaČlanstvaToolStripMenuItem
+            // 
+            this.mjesečnaČlanstvaToolStripMenuItem.Name = "mjesečnaČlanstvaToolStripMenuItem";
+            this.mjesečnaČlanstvaToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
+            this.mjesečnaČlanstvaToolStripMenuItem.Text = "4 - Mjesečna članstva";
+            this.mjesečnaČlanstvaToolStripMenuItem.Click += new System.EventHandler(this.mjesečnaČlanstvaToolStripMenuItem_Click);
+            // 
+            // nezgodeToolStripMenuItem
+            // 
+            this.nezgodeToolStripMenuItem.Name = "nezgodeToolStripMenuItem";
+            this.nezgodeToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
+            this.nezgodeToolStripMenuItem.Text = "5 - Nezgode";
+            this.nezgodeToolStripMenuItem.Click += new System.EventHandler(this.nezgodeToolStripMenuItem_Click);
             // 
             // FrmTroškovi
             // 
@@ -101,6 +167,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmTroškovi";
             this.Text = "Troškovi";
+            this.Load += new System.EventHandler(this.FrmTroškovi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrikazTroškova)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -117,5 +184,12 @@
         private System.Windows.Forms.ToolStripMenuItem prikažiSveTroškoveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prikažiTroškovePoVremenskomPerioduToolStripMenuItem;
         private System.Windows.Forms.Button bntUnesiTrošak;
+        private System.Windows.Forms.ToolStripMenuItem odNajstarijegToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem odNajnovijegToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hranaIPićeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kupovineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dugovanjaIPotraživanjaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mjesečnaČlanstvaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nezgodeToolStripMenuItem;
     }
 }

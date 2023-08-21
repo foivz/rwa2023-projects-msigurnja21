@@ -176,6 +176,12 @@ namespace Alat_za_praćenje_osobnih_financija
             dgvPrikazTroškova.Columns["Id"].Visible = false;
             dgvPrikazTroškova.Columns["Id_Korisnika"].Visible = false;
         }
+
+        private void btnUnesiPlaću_Click(object sender, EventArgs e)
+        {
+            FrmUnesiPlaću frmUnesiPlaću = new FrmUnesiPlaću();
+            frmUnesiPlaću.ShowDialog();
+        }
     }
     
 }

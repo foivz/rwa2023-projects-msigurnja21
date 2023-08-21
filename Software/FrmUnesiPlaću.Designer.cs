@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblIznosPlace = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIznos = new System.Windows.Forms.TextBox();
             this.dtpDatum = new System.Windows.Forms.DateTimePicker();
             this.lblDatum = new System.Windows.Forms.Label();
             this.btnUneciPlacu = new System.Windows.Forms.Button();
@@ -44,12 +44,12 @@
             this.lblIznosPlace.TabIndex = 0;
             this.lblIznosPlace.Text = "Iznos";
             // 
-            // textBox1
+            // txtIznos
             // 
-            this.textBox1.Location = new System.Drawing.Point(46, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(246, 22);
-            this.textBox1.TabIndex = 1;
+            this.txtIznos.Location = new System.Drawing.Point(46, 106);
+            this.txtIznos.Name = "txtIznos";
+            this.txtIznos.Size = new System.Drawing.Size(246, 22);
+            this.txtIznos.TabIndex = 1;
             // 
             // dtpDatum
             // 
@@ -77,6 +77,7 @@
             this.btnUneciPlacu.TabIndex = 11;
             this.btnUneciPlacu.Text = "Unesi";
             this.btnUneciPlacu.UseVisualStyleBackColor = true;
+            this.btnUneciPlacu.Click += new System.EventHandler(this.btnUneciPlacu_Click);
             // 
             // FrmUnesiPlaću
             // 
@@ -86,7 +87,7 @@
             this.Controls.Add(this.btnUneciPlacu);
             this.Controls.Add(this.dtpDatum);
             this.Controls.Add(this.lblDatum);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtIznos);
             this.Controls.Add(this.lblIznosPlace);
             this.Name = "FrmUnesiPlaću";
             this.Text = "Unos plaće";
@@ -98,7 +99,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblIznosPlace;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIznos;
         private System.Windows.Forms.DateTimePicker dtpDatum;
         private System.Windows.Forms.Label lblDatum;
         private System.Windows.Forms.Button btnUneciPlacu;

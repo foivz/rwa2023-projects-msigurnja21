@@ -30,7 +30,7 @@ namespace Alat_za_praćenje_osobnih_financija
                     Id_Korisnika = logiranKorisnik.Id,
                     Datum = dtpDatum.Value,
                     Iznos = double.Parse(txtIznos.Text),
-                    Komentar = txtKomentar.Text,
+                    Komentar = txtKomentar.Text
                 };
                 using (var context = new AlatZaPraćenjeOsobnihFinancijaEntities())
                 {

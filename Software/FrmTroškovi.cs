@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Alat_za_praćenje_osobnih_financija
 {
@@ -27,6 +28,8 @@ namespace Alat_za_praćenje_osobnih_financija
 
         private void FrmTroškovi_Load(object sender, EventArgs e)
         {
+
+            //prikaz troškova
             Korisnici logiranKorisnik = FrmPrijava.LogiranKorisnik;
             List<Troskovi> troskovis;
             using (var context = new AlatZaPraćenjeOsobnihFinancijaEntities())
@@ -37,10 +40,54 @@ namespace Alat_za_praćenje_osobnih_financija
                 troskovis = query.ToList();
             }
             dgvPrikazTroškova.DataSource = troskovis;
-            dgvPrikazTroškova.Columns["Komentar"].Width = 368;
+            dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
             dgvPrikazTroškova.Columns["Id_Korisnika"].Visible = false;
+
+            //prikat statistike
+            Series series = new Series("Troškovi");
+            series.ChartType = SeriesChartType.SplineArea;
+
+            using (var context = new AlatZaPraćenjeOsobnihFinancijaEntities())
+            {
+                var troskovi = context.Troskovis.OrderBy(Troskovi => Troskovi.Datum).ToList();
+                var place = context.Places.OrderBy(Place => Place.Datum).ToList();
+
+                DateTime minDate = troskovi.Any() ? troskovi.First().Datum : DateTime.MaxValue;
+                if (place.Any() && place.First().Datum < minDate)
+                {
+                    minDate = place.First().Datum;
+                }
+
+                double stanje = 0;
+                DateTime danas = DateTime.Now;
+
+                
+                while(minDate <= DateTime.Today)
+                {
+                    double iznosTroska = troskovi.Where(Troskovi => Troskovi.Datum == minDate).Sum(Troskovi => Troskovi.Iznos);
+                    double iznosPlace = place.Where(Place => Place.Datum == minDate).Sum(Place => Place.Iznos);
+
+                    stanje += iznosPlace - iznosTroska;
+                    
+                    if(minDate.Year == danas.Year && minDate.Month == danas.Month)
+                    {
+                        series.Points.AddXY(minDate, stanje);
+                    }
+                    minDate = minDate.AddDays(1);
+                   
+                }
+
+             
+            }
+
+            chStatistika.Series.Add(series);
+            chStatistika.ChartAreas[0].AxisX.Title = "Datum";
+            chStatistika.ChartAreas[0].AxisX.LabelStyle.Format = "dd/MMM";
+            chStatistika.ChartAreas[0].AxisY.Title = "Iznos";
+            chStatistika.Invalidate();
+          
 
         }
 
@@ -57,7 +104,7 @@ namespace Alat_za_praćenje_osobnih_financija
                 troskovis = query.ToList();
             }
             dgvPrikazTroškova.DataSource = troskovis;
-            dgvPrikazTroškova.Columns["Komentar"].Width = 368;
+            dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
             dgvPrikazTroškova.Columns["Id_Korisnika"].Visible = false;
@@ -76,7 +123,7 @@ namespace Alat_za_praćenje_osobnih_financija
                 troskovis = query.ToList();
             }
             dgvPrikazTroškova.DataSource = troskovis;
-            dgvPrikazTroškova.Columns["Komentar"].Width = 368;
+            dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
             dgvPrikazTroškova.Columns["Id_Korisnika"].Visible = false;
@@ -99,7 +146,7 @@ namespace Alat_za_praćenje_osobnih_financija
                 troskovis = query.ToList();
             }
             dgvPrikazTroškova.DataSource = troskovis;
-            dgvPrikazTroškova.Columns["Komentar"].Width = 368;
+            dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
             dgvPrikazTroškova.Columns["Id_Korisnika"].Visible = false;
@@ -117,7 +164,7 @@ namespace Alat_za_praćenje_osobnih_financija
                 troskovis = query.ToList();
             }
             dgvPrikazTroškova.DataSource = troskovis;
-            dgvPrikazTroškova.Columns["Komentar"].Width = 368;
+            dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
             dgvPrikazTroškova.Columns["Id_Korisnika"].Visible = false;
@@ -135,7 +182,7 @@ namespace Alat_za_praćenje_osobnih_financija
                 troskovis = query.ToList();
             }
             dgvPrikazTroškova.DataSource = troskovis;
-            dgvPrikazTroškova.Columns["Komentar"].Width = 368;
+            dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
             dgvPrikazTroškova.Columns["Id_Korisnika"].Visible = false;
@@ -153,7 +200,7 @@ namespace Alat_za_praćenje_osobnih_financija
                 troskovis = query.ToList();
             }
             dgvPrikazTroškova.DataSource = troskovis;
-            dgvPrikazTroškova.Columns["Komentar"].Width = 368;
+            dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
             dgvPrikazTroškova.Columns["Id_Korisnika"].Visible = false;
@@ -171,7 +218,7 @@ namespace Alat_za_praćenje_osobnih_financija
                 troskovis = query.ToList();
             }
             dgvPrikazTroškova.DataSource = troskovis;
-            dgvPrikazTroškova.Columns["Komentar"].Width = 368;
+            dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
             dgvPrikazTroškova.Columns["Id_Korisnika"].Visible = false;

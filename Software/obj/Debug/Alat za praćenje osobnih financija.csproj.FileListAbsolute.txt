@@ -56,3 +56,22 @@ D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\EntityFramework.Sq
 D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\EntityFramework.xml
 D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\EntityFramework.SqlServer.xml
 D:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.csproj.CopyComplete
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\Alat za praćenje osobnih financija.exe.config
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\Alat za praćenje osobnih financija.exe
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\Alat za praćenje osobnih financija.pdb
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\EntityFramework.dll
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\EntityFramework.SqlServer.dll
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\EntityFramework.xml
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\bin\Debug\EntityFramework.SqlServer.xml
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.csproj.AssemblyReference.cache
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.csproj.SuggestedBindingRedirects.cache
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat_za_praćenje_osobnih_financija.FrmPrijava.resources
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat_za_praćenje_osobnih_financija.FrmTroškovi.resources
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat_za_praćenje_osobnih_financija.FrmUnesiPlaću.resources
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat_za_praćenje_osobnih_financija.FrmUnesiTrošak.resources
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat_za_praćenje_osobnih_financija.Properties.Resources.resources
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.csproj.GenerateResource.cache
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.csproj.CoreCompileInputs.cache
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.csproj.CopyComplete
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.exe
+E:\ProjektRWA\rwa2023-projects-msigurnja21\Software\obj\Debug\Alat za praćenje osobnih financija.pdb

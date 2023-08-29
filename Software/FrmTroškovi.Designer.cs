@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dgvPrikazTroškova = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnsPrikazTroškova = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,19 +44,24 @@
             this.odNajnovijegToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bntUnesiTrošak = new System.Windows.Forms.Button();
             this.btnUnesiPlaću = new System.Windows.Forms.Button();
+            this.chStatistika = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrikazTroškova)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chStatistika)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPrikazTroškova
             // 
+            this.dgvPrikazTroškova.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPrikazTroškova.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrikazTroškova.Location = new System.Drawing.Point(12, 31);
             this.dgvPrikazTroškova.Name = "dgvPrikazTroškova";
             this.dgvPrikazTroškova.RowHeadersVisible = false;
             this.dgvPrikazTroškova.RowHeadersWidth = 51;
             this.dgvPrikazTroškova.RowTemplate.Height = 24;
-            this.dgvPrikazTroškova.Size = new System.Drawing.Size(895, 399);
+            this.dgvPrikazTroškova.Size = new System.Drawing.Size(895, 287);
             this.dgvPrikazTroškova.TabIndex = 0;
             // 
             // menuStrip1
@@ -64,7 +71,7 @@
             this.mnsPrikazTroškova});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(919, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(919, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,7 +81,7 @@
             this.prikažiSveTroškoveToolStripMenuItem,
             this.prikažiTroškovePoVremenskomPerioduToolStripMenuItem});
             this.mnsPrikazTroškova.Name = "mnsPrikazTroškova";
-            this.mnsPrikazTroškova.Size = new System.Drawing.Size(77, 24);
+            this.mnsPrikazTroškova.Size = new System.Drawing.Size(77, 26);
             this.mnsPrikazTroškova.Text = "Troškovi";
             // 
             // prikažiSveTroškoveToolStripMenuItem
@@ -149,7 +156,8 @@
             // 
             // bntUnesiTrošak
             // 
-            this.bntUnesiTrošak.Location = new System.Drawing.Point(765, 451);
+            this.bntUnesiTrošak.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bntUnesiTrošak.Location = new System.Drawing.Point(747, 677);
             this.bntUnesiTrošak.Name = "bntUnesiTrošak";
             this.bntUnesiTrošak.Size = new System.Drawing.Size(142, 33);
             this.bntUnesiTrošak.TabIndex = 2;
@@ -159,7 +167,8 @@
             // 
             // btnUnesiPlaću
             // 
-            this.btnUnesiPlaću.Location = new System.Drawing.Point(606, 451);
+            this.btnUnesiPlaću.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUnesiPlaću.Location = new System.Drawing.Point(589, 677);
             this.btnUnesiPlaću.Name = "btnUnesiPlaću";
             this.btnUnesiPlaću.Size = new System.Drawing.Size(142, 33);
             this.btnUnesiPlaću.TabIndex = 3;
@@ -167,11 +176,33 @@
             this.btnUnesiPlaću.UseVisualStyleBackColor = true;
             this.btnUnesiPlaću.Click += new System.EventHandler(this.btnUnesiPlaću_Click);
             // 
+            // chStatistika
+            // 
+            this.chStatistika.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea3.AxisY.MinorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea3.BackColor = System.Drawing.Color.White;
+            chartArea3.BorderColor = System.Drawing.Color.Transparent;
+            chartArea3.Name = "ChartArea1";
+            this.chStatistika.ChartAreas.Add(chartArea3);
+            this.chStatistika.Location = new System.Drawing.Point(18, 338);
+            this.chStatistika.Name = "chStatistika";
+            this.chStatistika.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series3.Name = "Series1";
+            this.chStatistika.Series.Add(series3);
+            this.chStatistika.Size = new System.Drawing.Size(888, 316);
+            this.chStatistika.TabIndex = 4;
+            // 
             // FrmTroškovi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 552);
+            this.ClientSize = new System.Drawing.Size(919, 744);
+            this.Controls.Add(this.chStatistika);
             this.Controls.Add(this.btnUnesiPlaću);
             this.Controls.Add(this.bntUnesiTrošak);
             this.Controls.Add(this.dgvPrikazTroškova);
@@ -183,6 +214,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrikazTroškova)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chStatistika)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,5 +236,6 @@
         private System.Windows.Forms.ToolStripMenuItem mjesečnaČlanstvaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nezgodeToolStripMenuItem;
         private System.Windows.Forms.Button btnUnesiPlaću;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chStatistika;
     }
 }

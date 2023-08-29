@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dgvPrikazTroškova = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnsPrikazTroškova = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +45,7 @@
             this.bntUnesiTrošak = new System.Windows.Forms.Button();
             this.btnUnesiPlaću = new System.Windows.Forms.Button();
             this.chStatistika = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnIzvjestaj = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrikazTroškova)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chStatistika)).BeginInit();
@@ -71,7 +72,7 @@
             this.mnsPrikazTroškova});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(919, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1149, 38);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,7 +82,7 @@
             this.prikažiSveTroškoveToolStripMenuItem,
             this.prikažiTroškovePoVremenskomPerioduToolStripMenuItem});
             this.mnsPrikazTroškova.Name = "mnsPrikazTroškova";
-            this.mnsPrikazTroškova.Size = new System.Drawing.Size(77, 26);
+            this.mnsPrikazTroškova.Size = new System.Drawing.Size(77, 34);
             this.mnsPrikazTroškova.Text = "Troškovi";
             // 
             // prikažiSveTroškoveToolStripMenuItem
@@ -180,28 +181,40 @@
             // 
             this.chStatistika.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea3.AxisY.MinorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea3.BackColor = System.Drawing.Color.White;
-            chartArea3.BorderColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            this.chStatistika.ChartAreas.Add(chartArea3);
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisY.MinorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.BackColor = System.Drawing.Color.White;
+            chartArea2.BorderColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.chStatistika.ChartAreas.Add(chartArea2);
             this.chStatistika.Location = new System.Drawing.Point(18, 338);
             this.chStatistika.Name = "chStatistika";
             this.chStatistika.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series3.Name = "Series1";
-            this.chStatistika.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series2.Name = "Series1";
+            this.chStatistika.Series.Add(series2);
             this.chStatistika.Size = new System.Drawing.Size(888, 316);
             this.chStatistika.TabIndex = 4;
+            // 
+            // btnIzvjestaj
+            // 
+            this.btnIzvjestaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnIzvjestaj.Location = new System.Drawing.Point(35, 677);
+            this.btnIzvjestaj.Name = "btnIzvjestaj";
+            this.btnIzvjestaj.Size = new System.Drawing.Size(142, 33);
+            this.btnIzvjestaj.TabIndex = 5;
+            this.btnIzvjestaj.Text = "Generiraj izvještaj";
+            this.btnIzvjestaj.UseVisualStyleBackColor = true;
+            this.btnIzvjestaj.Click += new System.EventHandler(this.btnIzvjestaj_Click);
             // 
             // FrmTroškovi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 744);
+            this.Controls.Add(this.btnIzvjestaj);
             this.Controls.Add(this.chStatistika);
             this.Controls.Add(this.btnUnesiPlaću);
             this.Controls.Add(this.bntUnesiTrošak);
@@ -237,5 +250,6 @@
         private System.Windows.Forms.ToolStripMenuItem nezgodeToolStripMenuItem;
         private System.Windows.Forms.Button btnUnesiPlaću;
         private System.Windows.Forms.DataVisualization.Charting.Chart chStatistika;
+        private System.Windows.Forms.Button btnIzvjestaj;
     }
 }

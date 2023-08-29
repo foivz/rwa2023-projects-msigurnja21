@@ -229,6 +229,12 @@ namespace Alat_za_praćenje_osobnih_financija
             FrmUnesiPlaću frmUnesiPlaću = new FrmUnesiPlaću();
             frmUnesiPlaću.ShowDialog();
         }
+
+        private void btnIzvjestaj_Click(object sender, EventArgs e)
+        {
+            FrmIzvjestaj frmIzvjestaj = new FrmIzvjestaj();
+            frmIzvjestaj.ShowDialog();
+        }
     }
     
 }

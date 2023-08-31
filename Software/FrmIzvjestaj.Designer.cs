@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.troskoviBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.troskoviDataSet = new Alat_za_praćenje_osobnih_financija.TroskoviDataSet();
             this.rpvTroskovi = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -58,9 +58,9 @@
             this.rpvTroskovi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource2.Name = "TroskoviDataSet";
-            reportDataSource2.Value = this.troskoviBindingSource;
-            this.rpvTroskovi.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "TroskoviDataSet";
+            reportDataSource1.Value = this.troskoviBindingSource;
+            this.rpvTroskovi.LocalReport.DataSources.Add(reportDataSource1);
             this.rpvTroskovi.LocalReport.ReportEmbeddedResource = "Alat_za_praćenje_osobnih_financija.Reports.RptTroskovi.rdlc";
             this.rpvTroskovi.Location = new System.Drawing.Point(20, 18);
             this.rpvTroskovi.Name = "rpvTroskovi";
@@ -96,7 +96,7 @@
             this.Controls.Add(this.btnZatvori);
             this.Controls.Add(this.rpvTroskovi);
             this.Name = "FrmIzvjestaj";
-            this.Text = "FrmIzvjestaj";
+            this.Text = "Popis troškova";
             this.Load += new System.EventHandler(this.FrmIzvjestaj_Load);
             ((System.ComponentModel.ISupportInitialize)(this.troskoviBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.troskoviDataSet)).EndInit();

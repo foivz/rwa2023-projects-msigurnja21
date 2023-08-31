@@ -42,5 +42,10 @@ namespace Alat_za_praćenje_osobnih_financija
                 MessageBox.Show("Morate popuniti sva polja!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void FrmUnesiPlaću_Load(object sender, EventArgs e)
+        {
+            dtpDatum.Value = DateTime.Now;
+        }
     }
 }

@@ -90,7 +90,8 @@
             this.Controls.Add(this.txtIznos);
             this.Controls.Add(this.lblIznosPlace);
             this.Name = "FrmUnesiPlaću";
-            this.Text = "Unos plaće";
+            this.Text = "Unesi plaću";
+            this.Load += new System.EventHandler(this.FrmUnesiPlaću_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

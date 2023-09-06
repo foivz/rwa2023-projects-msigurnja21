@@ -132,6 +132,7 @@
             this.Controls.Add(this.lblŠifra);
             this.Name = "FrmUnesiTrošak";
             this.Text = "Unesi trošak";
+            this.Load += new System.EventHandler(this.FrmUnesiTrošak_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

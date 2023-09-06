@@ -23,7 +23,8 @@ namespace Alat_za_praćenje_osobnih_financija
         private void bntUnesiTrošak_Click(object sender, EventArgs e)
         {
             FrmUnesiTrošak frmUnesiTrošak = new FrmUnesiTrošak();   
-            frmUnesiTrošak.ShowDialog();                             
+            frmUnesiTrošak.ShowDialog();
+            PrikazStatistike();
         }
 
         private void FrmTroškovi_Load(object sender, EventArgs e)
@@ -34,7 +35,7 @@ namespace Alat_za_praćenje_osobnih_financija
             List<Troskovi> troskovis;
             using (var context = new AlatZaPraćenjeOsobnihFinancijaEntities())
             {
-                var query = from t in context.Troskovis 
+                var query = from t in context.Troskovis
                             where t.Id_Korisnika == logiranKorisnik.Id
                             select t;
                 troskovis = query.ToList();
@@ -46,6 +47,12 @@ namespace Alat_za_praćenje_osobnih_financija
             dgvPrikazTroškova.Columns["Id_Korisnika"].Visible = false;
 
             //prikat statistike
+            PrikazStatistike();
+
+        }
+
+        private void PrikazStatistike()
+        {
             Series series = new Series("Troškovi");
             series.ChartType = SeriesChartType.SplineArea;
 
@@ -63,32 +70,31 @@ namespace Alat_za_praćenje_osobnih_financija
                 double stanje = 0;
                 DateTime danas = DateTime.Now;
 
-                
-                while(minDate <= DateTime.Today)
+
+                while (minDate <= DateTime.Today)
                 {
                     double iznosTroska = troskovi.Where(Troskovi => Troskovi.Datum == minDate).Sum(Troskovi => Troskovi.Iznos);
                     double iznosPlace = place.Where(Place => Place.Datum == minDate).Sum(Place => Place.Iznos);
 
                     stanje += iznosPlace - iznosTroska;
-                    
-                    if(minDate.Year == danas.Year && minDate.Month == danas.Month)
+
+                    if (minDate.Year == danas.Year && minDate.Month == danas.Month)
                     {
                         series.Points.AddXY(minDate, stanje);
                     }
                     minDate = minDate.AddDays(1);
-                   
+
                 }
 
-             
+
             }
 
+            chStatistika.Series.Clear();
             chStatistika.Series.Add(series);
             chStatistika.ChartAreas[0].AxisX.Title = "Datum";
             chStatistika.ChartAreas[0].AxisX.LabelStyle.Format = "dd/MMM";
             chStatistika.ChartAreas[0].AxisY.Title = "Iznos";
             chStatistika.Invalidate();
-          
-
         }
 
         private void odNajstarijegToolStripMenuItem_Click(object sender, EventArgs e)
@@ -122,6 +128,8 @@ namespace Alat_za_praćenje_osobnih_financija
                             select t;
                 troskovis = query.ToList();
             }
+
+           
             dgvPrikazTroškova.DataSource = troskovis;
             dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
@@ -228,6 +236,7 @@ namespace Alat_za_praćenje_osobnih_financija
         {
             FrmUnesiPlaću frmUnesiPlaću = new FrmUnesiPlaću();
             frmUnesiPlaću.ShowDialog();
+            PrikazStatistike();
         }
 
         private void btnIzvjestaj_Click(object sender, EventArgs e)

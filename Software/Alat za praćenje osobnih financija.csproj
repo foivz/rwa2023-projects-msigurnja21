@@ -142,6 +142,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TroskoviDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Upiti\UpitiTroskovi.cs" />
     <EmbeddedResource Include="FrmIzvjestaj.resx">
       <DependentUpon>FrmIzvjestaj.cs</DependentUpon>
     </EmbeddedResource>

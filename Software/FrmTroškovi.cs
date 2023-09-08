@@ -1,4 +1,5 @@
 ﻿using Alat_za_praćenje_osobnih_financija.Models;
+using Alat_za_praćenje_osobnih_financija.Upiti;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,18 +30,9 @@ namespace Alat_za_praćenje_osobnih_financija
 
         private void FrmTroškovi_Load(object sender, EventArgs e)
         {
-
-            //prikaz troškova
-            Korisnici logiranKorisnik = FrmPrijava.LogiranKorisnik;
-            List<Troskovi> troskovis;
-            using (var context = new AlatZaPraćenjeOsobnihFinancijaEntities())
-            {
-                var query = from t in context.Troskovis
-                            where t.Id_Korisnika == logiranKorisnik.Id
-                            select t;
-                troskovis = query.ToList();
-            }
-            dgvPrikazTroškova.DataSource = troskovis;
+            UpitiTroskovi upit = new UpitiTroskovi();
+            List<Troskovi> troskovi = upit.PrikazSvihTroskova();
+            dgvPrikazTroškova.DataSource = troskovi;
             dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
@@ -99,17 +91,9 @@ namespace Alat_za_praćenje_osobnih_financija
 
         private void odNajstarijegToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Korisnici logiranKorisnik = FrmPrijava.LogiranKorisnik;
-            List<Troskovi> troskovis;
-            using (var context = new AlatZaPraćenjeOsobnihFinancijaEntities())
-            {
-                var query = from t in context.Troskovis
-                            where t.Id_Korisnika == logiranKorisnik.Id
-                            orderby t.Datum ascending
-                            select t;
-                troskovis = query.ToList();
-            }
-            dgvPrikazTroškova.DataSource = troskovis;
+            UpitiTroskovi upit = new UpitiTroskovi();
+            List<Troskovi> troskovi = upit.PrikazTroskovaOdNajstarijeg();
+            dgvPrikazTroškova.DataSource = troskovi;
             dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
@@ -118,19 +102,9 @@ namespace Alat_za_praćenje_osobnih_financija
 
         private void odNajnovijegToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Korisnici logiranKorisnik = FrmPrijava.LogiranKorisnik;
-            List<Troskovi> troskovis;
-            using (var context = new AlatZaPraćenjeOsobnihFinancijaEntities())
-            {
-                var query = from t in context.Troskovis
-                            where t.Id_Korisnika == logiranKorisnik.Id
-                            orderby t.Datum descending
-                            select t;
-                troskovis = query.ToList();
-            }
-
-           
-            dgvPrikazTroškova.DataSource = troskovis;
+            UpitiTroskovi upit = new UpitiTroskovi();
+            List<Troskovi> troskovi = upit.PrikazTroskovaOdNajnovijeg();
+            dgvPrikazTroškova.DataSource = troskovi;
             dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
@@ -144,16 +118,9 @@ namespace Alat_za_praćenje_osobnih_financija
 
         private void hranaIPićeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Korisnici logiranKorisnik = FrmPrijava.LogiranKorisnik;
-            List<Troskovi> troskovis;
-            using (var context = new AlatZaPraćenjeOsobnihFinancijaEntities())
-            {
-                var query = from t in context.Troskovis
-                            where t.Id_Korisnika == logiranKorisnik.Id && t.Kategorija_troska.StartsWith("1")
-                            select t;
-                troskovis = query.ToList();
-            }
-            dgvPrikazTroškova.DataSource = troskovis;
+            UpitiTroskovi upit = new UpitiTroskovi();
+            List<Troskovi> troskovi = upit.PrikazTroskovaPoKategorijama("1");
+            dgvPrikazTroškova.DataSource = troskovi;
             dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
@@ -162,16 +129,9 @@ namespace Alat_za_praćenje_osobnih_financija
 
         private void kupovineToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Korisnici logiranKorisnik = FrmPrijava.LogiranKorisnik;
-            List<Troskovi> troskovis;
-            using (var context = new AlatZaPraćenjeOsobnihFinancijaEntities())
-            {
-                var query = from t in context.Troskovis
-                            where t.Id_Korisnika == logiranKorisnik.Id && t.Kategorija_troska.StartsWith("2")
-                            select t;
-                troskovis = query.ToList();
-            }
-            dgvPrikazTroškova.DataSource = troskovis;
+            UpitiTroskovi upit = new UpitiTroskovi();
+            List<Troskovi> troskovi = upit.PrikazTroskovaPoKategorijama("2");
+            dgvPrikazTroškova.DataSource = troskovi;
             dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
@@ -180,16 +140,9 @@ namespace Alat_za_praćenje_osobnih_financija
 
         private void dugovanjaIPotraživanjaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Korisnici logiranKorisnik = FrmPrijava.LogiranKorisnik;
-            List<Troskovi> troskovis;
-            using (var context = new AlatZaPraćenjeOsobnihFinancijaEntities())
-            {
-                var query = from t in context.Troskovis
-                            where t.Id_Korisnika == logiranKorisnik.Id && t.Kategorija_troska.StartsWith("3")
-                            select t;
-                troskovis = query.ToList();
-            }
-            dgvPrikazTroškova.DataSource = troskovis;
+            UpitiTroskovi upit = new UpitiTroskovi();
+            List<Troskovi> troskovi = upit.PrikazTroskovaPoKategorijama("3");
+            dgvPrikazTroškova.DataSource = troskovi;
             dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
@@ -198,16 +151,9 @@ namespace Alat_za_praćenje_osobnih_financija
 
         private void mjesečnaČlanstvaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Korisnici logiranKorisnik = FrmPrijava.LogiranKorisnik;
-            List<Troskovi> troskovis;
-            using (var context = new AlatZaPraćenjeOsobnihFinancijaEntities())
-            {
-                var query = from t in context.Troskovis
-                            where t.Id_Korisnika == logiranKorisnik.Id && t.Kategorija_troska.StartsWith("4")
-                            select t;
-                troskovis = query.ToList();
-            }
-            dgvPrikazTroškova.DataSource = troskovis;
+            UpitiTroskovi upit = new UpitiTroskovi();
+            List<Troskovi> troskovi = upit.PrikazTroskovaPoKategorijama("4");
+            dgvPrikazTroškova.DataSource = troskovi;
             dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
@@ -216,16 +162,9 @@ namespace Alat_za_praćenje_osobnih_financija
 
         private void nezgodeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Korisnici logiranKorisnik = FrmPrijava.LogiranKorisnik;
-            List<Troskovi> troskovis;
-            using (var context = new AlatZaPraćenjeOsobnihFinancijaEntities())
-            {
-                var query = from t in context.Troskovis
-                            where t.Id_Korisnika == logiranKorisnik.Id && t.Kategorija_troska.StartsWith("5")
-                            select t;
-                troskovis = query.ToList();
-            }
-            dgvPrikazTroškova.DataSource = troskovis;
+            UpitiTroskovi upit = new UpitiTroskovi();
+            List<Troskovi> troskovi = upit.PrikazTroskovaPoKategorijama("5");
+            dgvPrikazTroškova.DataSource = troskovi;
             dgvPrikazTroškova.Columns["Komentar"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvPrikazTroškova.Columns["Korisnici"].Visible = false;
             dgvPrikazTroškova.Columns["Id"].Visible = false;
